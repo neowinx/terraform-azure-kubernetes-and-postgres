@@ -1,5 +1,10 @@
 # terraform-azure-kubernetes-and-postgres
 
+This is just a bunch of quickstart terraform templates mixed un a blender just for testing out shings
+
+# DO NOT USE THIS FOR PRODUCTION
+
+## YOU'VE BEEN WARNED
 
 
 ## Getting started

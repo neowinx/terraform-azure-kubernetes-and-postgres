@@ -10,5 +10,10 @@ variable "resource_group_name_prefix" {
 
 variable "name_prefix" {
   default     = "postgresqlfs"
-  description = "Prefix of the resource name."
+  description = "Prefix of the postgresql resource name"
 }
+
+variable "prefix" {
+  description = "A prefix used kubernetes resources"
+}
+

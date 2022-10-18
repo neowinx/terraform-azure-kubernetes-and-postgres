@@ -87,3 +87,20 @@ resource "azurerm_postgresql_flexible_server" "default" {
 
   depends_on = [azurerm_private_dns_zone_virtual_network_link.default]
 }
+
+resource "azurerm_kubernetes_cluster" "default" {
+  name                = "${var.prefix}-k8s"
+  location            = azurerm_resource_group.default.location
+  resource_group_name = azurerm_resource_group.default.name
+  dns_prefix          = "${var.prefix}-k8s"
+
+  default_node_pool {
+    name       = "default"
+    node_count = 1
+    vm_size    = "B4ms"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+}
