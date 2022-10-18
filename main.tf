@@ -72,7 +72,7 @@ resource "azurerm_private_dns_zone_virtual_network_link" "default" {
 }
 
 resource "azurerm_postgresql_flexible_server" "default" {
-  name                   = "${var.name_prefix}-server"
+  name                   = "${var.name_prefix}-server-db"
   resource_group_name    = azurerm_resource_group.default.name
   location               = azurerm_resource_group.default.location
   version                = "13"
